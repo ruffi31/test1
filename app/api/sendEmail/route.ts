@@ -45,7 +45,7 @@ export async function POST(request: Request) {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     //to: 'tusaludpharmacy9109@gmail.com',
-    to: 'arauf.cs@gmail.com',
+    to: 'sherwood9721@gmail.com',
     subject: `${type || 'Unknown'} Prescription Request from ${fullName || 'Unknown'}`,
     text: message,
   };
