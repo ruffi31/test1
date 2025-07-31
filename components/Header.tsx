@@ -20,37 +20,41 @@ export default function Header() {
           <Link href="/" className="text-gray-600 hover:text-purple-600 transition">Home</Link>
           <Link href="/refill" className="text-gray-600 hover:text-purple-600 transition">Refill</Link>
           <Link href="/transfer" className="text-gray-600 hover:text-purple-600 transition">Transfer</Link>
+{/* Services with submenu (Desktop - Clickable) */}
+<div className="relative">
+  <button
+    type="button"
+    onClick={() => setServicesSubmenuOpen(!servicesSubmenuOpen)}
+    className="text-gray-600 hover:text-purple-600 transition flex items-center gap-1"
+  >
+    Services
+    <svg
+      className={`w-4 h-4 mt-1 transform transition-transform ${servicesSubmenuOpen ? 'rotate-180' : 'rotate-0'}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
 
-          {/* Services with submenu */}
-          <div className="relative group">
-            <button
-              type="button"
-              className="text-gray-600 hover:text-purple-600 transition flex items-center gap-1"
-            >
-              Services
-              <svg
-                className="w-4 h-4 mt-1"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
+  {servicesSubmenuOpen && (
+    <div className="absolute left-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+      <Link href="/refill" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Prescription Refills</Link>
+      <Link href="/immunization" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Vaccinations</Link>
+      <Link href="/consult" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Medication Counseling</Link>
+      <Link href="/consult" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Consult a Pharmacist</Link>
+      <Link href="/otc" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">OTC Products</Link>
+      <Link href="/dmv" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">DMV Vision Test</Link>
+      <Link href="/delivery" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Free Delivery</Link>
+      <Link href="/passport" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Passport Pictures</Link>
+      <Link href="/otherservices" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Other Services</Link>
+    </div>
+  )}
+</div>
 
-            <div className="absolute left-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50">
-              <Link href="/refill" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Prescription Refills</Link>
-              <Link href="/immunization" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Vaccinations</Link>
-              <Link href="/consult" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Medication Counseling</Link>
-              <Link href="/consult" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Consult a Pharmacist</Link>
-              <Link href="/otc" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">OTC Products</Link>
-              <Link href="/dmv" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">DMV Vision Test</Link>
-              <Link href="/delivery" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Free Delivery</Link>
-              <Link href="/passport" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Passport Pictures</Link>
-              <Link href="/otherservices" className="block px-4 py-2 text-gray-700 hover:bg-purple-100">Other Services</Link>
-            </div>
-          </div>
+
 
           <Link href="/consult" className="text-gray-600 hover:text-purple-600 transition">Contact Us</Link>
         </nav>
