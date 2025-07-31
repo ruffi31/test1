@@ -41,7 +41,7 @@ export default function Footer() {
             <ul className="space-y-1">
               <li><a href="/consult" className="hover:underline">Consult a Pharmacist</a></li>
               <li><a href="/immunization" className="hover:underline">Vaccination</a></li>
-              <li><a href="/deliver" className="hover:underline">Free Delivery</a></li>
+              <li><a href="/delivery" className="hover:underline">Free Delivery</a></li>
 
               <li><a href="/refill" className="hover:underline">Refill Prescription</a></li>
               <li><a href="/transfer" className="hover:underline">Transfer Prescription</a></li>

@@ -12,6 +12,17 @@ export default function Passport() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          {/* Right image */}
+          <section className="flex justify-center px-4">
+            <motion.img
+              src="/IMG_2392.jpg"
+              alt="Vaccination"
+              className="rounded-3xl shadow-lg max-w-full h-auto object-cover"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            />
+          </section>          
           {/* Left text */}
           <section className="text-gray-800 px-4">
             <h1 className="text-4xl font-bold text-purple-700 mb-6">Passport Pictures</h1>
@@ -23,18 +34,6 @@ export default function Passport() {
             >
               📞 CALL FOR DETAILS
             </a>
-          </section>
-
-          {/* Right image */}
-          <section className="flex justify-center px-4">
-            <motion.img
-              src="/IMG_2392.jpg"
-              alt="Vaccination"
-              className="rounded-3xl shadow-lg max-w-full h-auto object-cover"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            />
           </section>
         </motion.div>
 
